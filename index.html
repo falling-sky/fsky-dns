@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>falling-sky dns generator.</title>
+  <link rel="stylesheet" href="index.css" type="text/css"  />
+  <script type="text/javascript" src="jquery-2.2.1.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="templates.js"></script>
+
+<body>
+  <div id="formcontainer">
+  <form id="form" action="javascript:update_templates();true;">
+  <table>
+  <tr><td>Domain Name:</td><td> <input type="text" size="40" id="form_domain" value="test-ipv6.example.org"></td><tr>
+    <tr><td>Primary NS (for SOA):</td><td> <input type="text" size="40" id="form_ns" value="ns1.example.org"></td></tr>
+    <tr><td>Hostmaster (for SOA):</td><td> <input type="text" size="40" id="form_hostmaster" value="hostmaster.example.org"></td></tr>
+    <tr><td colspan=2><hr></td></tr>
+    <tr><td>IPv4:</td><td> <input type="text" size="40" id="form_4" value="192.0.2.1"></td></tr>    
+    <tr><td>IPv6 #1 (most tests):</td><td> <input type="text" size="40" id="form_6" value="2001:db8::1"></td></tr>    
+    <tr><td>IPv6 #2 (for mtu1280):</td><td> <input type="text" size="40" id="form_1280" value="2001:db8::1280"></td></tr> 
+    <tr><td colspan=2><hr></td></tr>
+    </table>
+    <input type="hidden" id="form_buggy" value="::">
+    <input type="hidden" id="form_serial" value="::">
+    </form>
+  </div>
+  
+  
+  <div id="domain">
+  <div>	
+  <pre><code id="code_domain"></code></pre>
+  </div>
+  <hr>
+
+  <div id="v6ns1">
+  <div>
+  <pre><code id="code_v6ns1"></code></pre>
+  </div>
+  <hr>
+
+  <div id="v6ns">
+  <div>
+  <pre><code id="code_v6ns"></code></pre>
+  </div>
+  <hr>
+  
+  
+  
+</body>
+</html>
